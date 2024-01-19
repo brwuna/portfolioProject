@@ -2,6 +2,12 @@ import { Inter, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import { ReactNode } from 'react'
 import { Header } from './components/Header'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Bruna Nascimento - Portfolio',
+  description: 'My portfolio',
+}
 
 const inter = Inter({
   variable: '--font-inter',

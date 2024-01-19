@@ -1,6 +1,9 @@
+'use client'
+
 import Image from 'next/image'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { TbBrandGithub, TbBrandLinkedin, TbBrandWhatsapp } from 'react-icons/tb'
+import { TypeAnimation } from 'react-type-animation'
 
 import { Button } from '@/app/components/Button'
 import { TechBadge } from '@/app/components/Tech-badge'
@@ -21,22 +24,30 @@ const MOCK_CONTACTS = [
 ]
 
 export const HeroSection = () => {
-  const techNames = ['HTML', 'CSS', 'JavaScript', 'ReactJS']
+  const techNames = ['HTML', 'CSS', 'JavaScript', 'ReactJS', 'TypeScript']
 
   return (
-    <section className="w-full lg:h-[755px] flex flex-col justify-center pb-10 sm:pb-32 py-32 lg:pb-[110px]">
+    <section className="w-full lg:h-[755px] flex flex-col justify-center pb-10 sm:pb-32 py-32 lg:pb-[110px] absolute top-[30px] z-20">
       <div className="container flex items-center lg:items-start justify-between flex-col-reverse lg:flex-row">
         <div className="w-auto lg:w-full lg:max-w-[530px]">
-          <p className="font-mono text-purple-400 text-3xl lg:text-4xl ">
-            Hey{''}
-            <span className="animate-blink-opacity text-purple-600 text-medium">
-              💜
+          <h1 className="text-white font-medium text-3xl mt-8 lg:text-4xl">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-950">
+              Hello, I&apos;m <br></br>
             </span>
-          </p>
-          <h2 className="text-lg mt-2 text-gray-400">
-            meu nome é{' '}
-            <span className="font-medium text-xl text-purple-400">Bruna</span>
-          </h2>
+            <TypeAnimation
+              sequence={[
+                'Bruna',
+                4000,
+                'Web Developer',
+                2000,
+                'Mobile Developer',
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
+          </h1>
 
           <p className="text-gray-400 my-4 text-sm sm:text-base">
             Sou formada em Biomedicina e atualmente estou fazendo minha
@@ -74,13 +85,15 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
-        <Image
-          className="w-[230px] h-[230px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 rounded object-cover"
-          width={420}
-          height={404}
-          src="/images/me7.png"
-          alt="Foto de perfil"
-        />
+        <div className="custom-rounded bg-[#2523238c]/40 w-[250px] h-[250px] md:w-[360px] md:h-[360px] lg:w-[400px] lg:h-[400px]">
+          <Image
+            className="custom-rounded w-[250px] h-[250px] mb-6 md:flex md:w-[360px] md:h-[360px] lg:w-[400px] lg:h-[400px] lg:mb-0 object-cover"
+            width={400}
+            height={400}
+            src="/images/avatar.png"
+            alt="Foto de perfil"
+          />
+        </div>
       </div>
     </section>
   )
