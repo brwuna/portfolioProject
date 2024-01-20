@@ -29,11 +29,11 @@ export const Header = () => {
             <source src="/blackhole.webm" type="video/webm" />
           </video>
 
-          <div className="w-full h-[75px] top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] blackdrop-blur-md z-[30] px-10 flex justify-between items-center lg:justify-end">
-            <div className="text-2xl text-purple-400 font-mono lg:hidden">
+          <div className="w-full h-[75px] top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] blackdrop-blur-md z-[30] px-5 lg:px-10 flex justify-between items-center lg:justify-end">
+            <div className="text-xl md:2xl lg:hidden text-purple-400 font-mono">
               &lt;/&gt;
             </div>
-            <nav className="flex items-center gap-4 sm:gap-9 border border-[#7042f861] bg-[#0300145e] my-[20px] px-[20px] py-[10px] rounded-full">
+            <nav className="flex items-center gap-4 sm:gap-9 lg:border lg:border-[#7042f861] lg:bg-[#0300145e] my-[20px] lg:px-[20px] lg:py-[10px] rounded-full">
               {NAV_ITEMS.map((item) => (
                 <NavItem {...item} key={item.label} />
               ))}

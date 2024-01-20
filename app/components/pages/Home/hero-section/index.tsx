@@ -85,9 +85,9 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="custom-rounded bg-[#2523238c]/40 w-[250px] h-[250px] md:w-[360px] md:h-[360px] lg:w-[400px] lg:h-[400px]">
+        <div className="custom-rounded bg-[#2523238c]/40 w-[270px] h-[270px] md:w-[360px] md:h-[360px] lg:w-[400px] lg:h-[400px]">
           <Image
-            className="custom-rounded w-[250px] h-[250px] mb-6 md:flex md:w-[360px] md:h-[360px] lg:w-[400px] lg:h-[400px] lg:mb-0 object-cover"
+            className="custom-rounded w-[270px] h-[270px] mb-6 md:flex md:w-[360px] md:h-[360px] lg:w-[400px] lg:h-[400px] lg:mb-0 object-cover"
             width={400}
             height={400}
             src="/images/avatar.png"

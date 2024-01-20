@@ -3,6 +3,8 @@ import './globals.css'
 import { ReactNode } from 'react'
 import { Header } from './components/Header'
 import { Metadata } from 'next'
+import { ContactForm } from './components/ContactForm'
+import { Footer } from './components/Footer'
 
 export const metadata: Metadata = {
   title: 'Bruna Nascimento - Portfolio',
@@ -26,6 +28,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <Header />
         {children}
+        <ContactForm />
+        <Footer />
       </body>
     </html>
   )
