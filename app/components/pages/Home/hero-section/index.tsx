@@ -24,6 +24,13 @@ const MOCK_CONTACTS = [
 ]
 
 export const HeroSection = () => {
+  const handleContact = () => {
+    const contactSection = document.querySelector('#contact')
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   const techNames = ['HTML', 'CSS', 'JavaScript', 'ReactJS', 'TypeScript']
 
   return (
@@ -50,12 +57,10 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-gray-400 my-4 text-sm sm:text-base">
-            Sou formada em Biomedicina e atualmente estou fazendo minha
-            transição de carreira 💙 aspiring Front End developer. Lorem, ipsum
-            dolor sit amet consectetur adipisicing elit. Dignissimos deleniti
-            aspernatur earum maxime aliquam similique nostrum eveniet magnam
-            nisi ipsa asperiores debitis illo in nam, id quos? Corrupti,
-            deserunt temporibus!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Dignissimos deleniti aspernatur earum maxime aliquam similique
+            nostrum eveniet magnam nisi ipsa asperiores debitis illo in nam, id
+            quos? Corrupti, deserunt temporibus!
           </p>
 
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">
@@ -65,7 +70,7 @@ export const HeroSection = () => {
           </div>
 
           <div className="mt-6 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
-            <Button className="w-max shadow-button">
+            <Button className="w-max shadow-button" onClick={handleContact}>
               Entre em contato
               <HiArrowNarrowRight size={18} className="animate-bounce" />
             </Button>
