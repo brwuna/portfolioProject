@@ -26,6 +26,17 @@ const getPageData = async (): Promise<HomePageData> => {
           iconSvg
           name
         }
+        featuredProjects {
+          slug
+          thumbnail {
+            url
+          }
+          title
+          shortDescription
+          technologies {
+            name
+          }
+        }
       }
     }
   `
@@ -35,12 +46,13 @@ const getPageData = async (): Promise<HomePageData> => {
 
 export default async function Home() {
   const { page: pageData } = await getPageData()
+
   return (
     <>
       <Header />
       <HeroSection homeInfo={pageData} />
-      <SkillsTech />
-      <FeaturedProjects />
+      <SkillsTech techs={pageData.skillsTechs} />
+      <FeaturedProjects projects={pageData.featuredProjects} />
     </>
   )
 }

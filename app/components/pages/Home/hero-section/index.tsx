@@ -47,7 +47,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
             />
           </h1>
 
-          <div className="text-gray-400 text-justify my-4 text-sm sm:text-base">
+          <div className="text-gray-400 my-4 text-sm sm:text-base">
             <RichText content={homeInfo.introduction.raw} />
           </div>
 

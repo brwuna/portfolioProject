@@ -3,18 +3,25 @@ import { SectionTitle } from '@/app/components/SectionTitle'
 import { ProjectCard } from './ProjectCard'
 import { Link } from '@/app/components/Link'
 import { HiArrowNarrowRight } from 'react-icons/hi'
+import { Project } from '@/app/types/projects'
 
-export const FeaturedProjects = () => {
+type FeaturedProjectsProps = {
+  projects: Project[]
+}
+
+export const FeaturedProjects = ({ projects }: FeaturedProjectsProps) => {
   return (
     <section className="container py-16">
-      <SectionTitle subtitle="destaques" title="Projetos em Destaque" />
+      <SectionTitle subtitle="featuredProjects" title="Projetos em Destaque" />
       <Divider className="mb-16" />
 
       <div>
-        <ProjectCard />
-        <Divider className="my-16" />
-        <ProjectCard />
-        <Divider className="my-16" />
+        {projects?.map((project) => (
+          <div key={project.slug}>
+            <ProjectCard project={project} />
+            <Divider className="my-16" />
+          </div>
+        ))}
 
         <p className="flex items-center gap-1.5">
           <Link href="/projects" className="inline-flex">
