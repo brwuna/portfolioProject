@@ -1,16 +1,19 @@
 import { Inter, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import { ReactNode } from 'react'
-import { Metadata } from 'next'
-import { Header } from './components/Header'
 import { StarsCanvas } from './components/StarBackground'
 import { ContactForm } from './components/ContactForm'
 import { Footer } from './components/Footer'
 import { BackToTop } from './components/BackToTop'
 
-export const metadata: Metadata = {
-  title: 'Bruna Nascimento - Portfolio',
-  description: 'My portfolio',
+export const metadata = {
+  title: {
+    default: 'Home',
+    template: '%s | Bruna Nascimento',
+  },
+  icons: {
+    icon: '/favicon2.svg',
+  },
 }
 
 const inter = Inter({
