@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { NavItem } from './nav-items'
+import { motion } from 'framer-motion'
 
 const NAV_ITEMS = [
   {
@@ -19,7 +20,12 @@ export const Header = () => {
   return (
     <header className="w-full h-full">
       <div className="flex flex-col h-[850px] gap-20">
-        <div className="relative flex flex-col h-full w-full">
+        <motion.div
+          className="relative flex flex-col h-full w-full"
+          initial={{ top: -100 }}
+          animate={{ top: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <video
             autoPlay
             muted
@@ -29,9 +35,16 @@ export const Header = () => {
             <source src="/blackhole.webm" type="video/webm" />
           </video>
 
-          <div className="w-full h-[75px] top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] blackdrop-blur-md z-[30] px-5 lg:px-10 flex justify-between items-center lg:justify-end">
-            <div className="text-xl md:2xl lg:hidden text-purple-400 font-mono">
-              &lt;/&gt;
+          <div className="w-full h-[75px] top-0 blackdrop-blur-md z-[30] px-5 lg:px-10 flex justify-between items-center lg:justify-end">
+            <div className="lg:hidden">
+              <Link href="/">
+                <Image
+                  width={45}
+                  height={40}
+                  src="/images/logo2.svg"
+                  alt="Code"
+                />
+              </Link>
             </div>
             <nav className="flex items-center gap-4 sm:gap-9 lg:border lg:border-[#7042f861] lg:bg-[#0300145e] my-[20px] lg:px-[20px] lg:py-[10px] rounded-full">
               {NAV_ITEMS.map((item) => (
@@ -39,7 +52,7 @@ export const Header = () => {
               ))}
             </nav>
           </div>
-        </div>
+        </motion.div>
       </div>
     </header>
   )

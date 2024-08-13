@@ -5,6 +5,7 @@ import { StarsCanvas } from './components/StarBackground'
 import { ContactForm } from './components/ContactForm'
 import { Footer } from './components/Footer'
 import { BackToTop } from './components/BackToTop'
+import { Toaster } from './components/Toaster'
 
 export const metadata = {
   title: {
@@ -12,7 +13,7 @@ export const metadata = {
     template: '%s | Bruna Nascimento',
   },
   icons: {
-    icon: '/favicon2.svg',
+    icon: '/favicon.svg',
   },
 }
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
       <body>
         <StarsCanvas />
+        <Toaster />
         <BackToTop />
         {children}
         <ContactForm />
