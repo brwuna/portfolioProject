@@ -2,8 +2,6 @@
 
 import { SectionTitle } from '@/app/components/SectionTitle'
 import { SkillTech } from './skill-tech'
-import { FaHtml5, FaCss3, FaReact } from 'react-icons/fa'
-import { TbBrandJavascript } from 'react-icons/tb'
 import { SkillTech as ISkillTech } from '@/app/types/projects'
 import { motion } from 'framer-motion'
 type SkillTechsProps = {
@@ -11,25 +9,6 @@ type SkillTechsProps = {
 }
 
 export const SkillsTech = ({ techs }: SkillTechsProps) => {
-  const techListIcons = [
-    {
-      name: 'HTML',
-      icon: <FaHtml5 style={{ width: '4.5rem', height: '4.5rem' }} />,
-    },
-    {
-      name: 'CSS',
-      icon: <FaCss3 style={{ width: '4.5rem', height: '4.5rem' }} />,
-    },
-    {
-      name: 'JavaScript',
-      icon: <TbBrandJavascript style={{ width: '4.5rem', height: '4.5rem' }} />,
-    },
-    {
-      name: 'React',
-      icon: <FaReact style={{ width: '4.5rem', height: '4.5rem' }} />,
-    },
-  ]
-
   return (
     <section className="container py-20">
       <SectionTitle

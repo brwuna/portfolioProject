@@ -14,6 +14,11 @@ const NAV_ITEMS = [
     label: 'Projetos',
     href: '/projects',
   },
+  {
+    label: 'Download CV',
+    href: '/cv-bn.pdf',
+    target: '_blank',
+  },
 ]
 
 export const Header = () => {
@@ -46,9 +51,14 @@ export const Header = () => {
                 />
               </Link>
             </div>
-            <nav className="flex items-center gap-4 sm:gap-9 lg:border lg:border-[#7042f861] lg:bg-[#0300145e] my-[20px] lg:px-[20px] lg:py-[10px] rounded-full">
+            <nav className="flex flex-col lg:flex-row items-center sm:gap-6 lg:border lg:border-[#7042f861] lg:bg-[#0300145e] my-[20px] lg:px-[20px] lg:py-[10px] rounded-full">
               {NAV_ITEMS.map((item) => (
-                <NavItem {...item} key={item.label} />
+                <NavItem
+                  {...item}
+                  key={item.label}
+                  target={item.target}
+                  rel="noopener noreferrer"
+                />
               ))}
             </nav>
           </div>
