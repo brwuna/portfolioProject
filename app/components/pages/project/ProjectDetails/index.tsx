@@ -34,7 +34,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
       />
 
       <SectionTitle
-        subtitle="projetos"
+        subtitle="project"
         title={project.title}
         className="text-center items-center sm:[&>h3]:text-4xl"
       />

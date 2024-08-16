@@ -9,7 +9,7 @@ export const PageIntroduction = () => {
   return (
     <section className="w-full h-[290px] lg:h-[360px] flex flex-col items-center justify-center px-2">
       <SectionTitle
-        subtitle="projetos"
+        subtitle="projects"
         title="Meus Projetos"
         className="text-center items-center [&>h3]:-text-4xl"
       />
