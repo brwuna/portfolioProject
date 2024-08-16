@@ -24,7 +24,7 @@ export const PageIntroduction = () => {
         <p className="text-gray-400 text-center max-w-[640px] my-6 text-sm sm:text-base">
           Aqui você terá a oportunidade de visualizar alguns dos projetos que
           elaborei. Sinta-se à vontade para explorar e navegar entre eles,
-          descobrindo as tecnologias empregadas e as funcionalidades integradas.
+          descobrindo as tecnologias utilizadas e as funcionalidades integradas.
         </p>
         <Link href="/">
           <HiArrowNarrowLeft />
