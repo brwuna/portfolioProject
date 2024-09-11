@@ -16,7 +16,7 @@ const getPageData = async (): Promise<HomePageData> => {
         introduction {
           raw
         }
-        technologies {
+        technologies(last: 100) {
           name
         }
         profilePicture {
@@ -26,7 +26,7 @@ const getPageData = async (): Promise<HomePageData> => {
           url
           iconSvg
         }
-        skillsTechs {
+        skillsTechs(last: 100) {
           iconSvg
           name
         }

@@ -8,10 +8,11 @@ export const fetchHygraphQuery = async <T>(
       'Content-Type': 'application/json',
       Accept: 'application/json',
       Authorization: `Bearer ${process.env.HYGRAPH_TOKEN}`,
+    //  'Cache-Control': 's-maxage=0',
     },
     body: JSON.stringify({ query }),
     next: {
-      revalidate,
+      revalidate: 0,
     },
   })
 
