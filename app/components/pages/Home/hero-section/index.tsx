@@ -39,14 +39,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
               Hello, I&apos;m <br></br>
             </span>
             <TypeAnimation
-              sequence={[
-                'Bruna',
-                4000,
-                'Web Developer',
-                2000,
-                'Mobile Developer',
-                2000,
-              ]}
+              sequence={['Bruna', 4000, 'Front-End Developer', 2000]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
